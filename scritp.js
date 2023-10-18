@@ -39,22 +39,29 @@
     }*/
 
     const listeMots = ["Cachalot", "Pétunia", "Serviette"];
+    const listePhrase = ["Pas de panique !", "La vie, l'univers et le reste", "Merci pour le poisson"]
     let score = 0;
-    let motUtilisateur = prompt("Entrez le mot : " + listeMots[0]);
-    if(motUtilisateur === listeMots[0]) {
-        score +=1;
+    let Reponse = prompt("Voulez-vous la liste de mots ou de phrases ? (mots ou phrases) :")
+    while( Reponse !== mots ){
+        Reponse = prompt("Voulez-vous la liste de mots ou de phrases ? (mots ou phrases) :")
     }
-    console.log(score);
-    motUtilisateur = prompt("Entrez le mot : " + listeMots[1]);
-    if(motUtilisateur === listeMots[1]) {
-        score +=1;
+    if( Reponse === mots){
+        for (let compt=0; compt < 3; compt ++){
+            let motUtilisateur = prompt("Entrez le mot : " + listeMots[compt]);
+            if(motUtilisateur === listeMots[compt]) {
+                score +=1;
+            }
+        
+        }
+    }else{
+        for (let compt=0; compt < 3; compt ++){
+            let motUtilisateur = prompt("Entrez le mot : " + listePhrase[compt]);
+            if(motUtilisateur === listePhrase[compt]) {
+                score +=1;
+            }
+        }
     }
-    console.log(score);
-
-    motUtilisateur = prompt("Entrez le mot : " + listeMots[2]);
-    if(motUtilisateur === listeMots[2]) {
-        score +=1;
-    }
+    
     console.log(score);
 
 
