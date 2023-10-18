@@ -42,11 +42,11 @@
     const listePhrase = ["Pas de panique !", "La vie, l'univers et le reste", "Merci pour le poisson"]
     let score = 0;
     let Reponse = prompt("Voulez-vous la liste de mots ou de phrases ? (mots ou phrases) :")
-    while( Reponse !== mots ){
+    while( Reponse !== "mots" && Reponse !== "phrases" ){
         Reponse = prompt("Voulez-vous la liste de mots ou de phrases ? (mots ou phrases) :")
     }
-    if( Reponse === mots){
-        for (let compt=0; compt < 3; compt ++){
+    if( Reponse === "mots"){
+        for (let compt=0; compt < listeMots.length; compt ++){
             let motUtilisateur = prompt("Entrez le mot : " + listeMots[compt]);
             if(motUtilisateur === listeMots[compt]) {
                 score +=1;
@@ -54,7 +54,7 @@
         
         }
     }else{
-        for (let compt=0; compt < 3; compt ++){
+        for (let compt=0; compt < listePhrase.length; compt ++){
             let motUtilisateur = prompt("Entrez le mot : " + listePhrase[compt]);
             if(motUtilisateur === listePhrase[compt]) {
                 score +=1;
