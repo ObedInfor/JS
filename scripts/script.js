@@ -65,10 +65,7 @@
     }*/
 
 
-        // Déclaration des tableaux contenant les listes des mots proposés à l'utilisateur
-    const listeMots = ["Cachalot", "Pétunia", "Serviette"]
-    const listePhrases = ["Pas de panique !", "La vie, l'univers et le reste", "Merci pour le poisson"]
-
+       
 
     function afficherResultat(score,nbMotsProposes){
         // on affiche le score de l'utilusateur
@@ -102,7 +99,7 @@
         let choix = choisirPhrasesOuMots();
         let score = 0;
         let nbMotsProposes = 0;
-
+    
         if (choix === "mots"){
             score = lancerBoucleDeJeu(listeMots);
             nbMotsProposes = listeMots.length;
@@ -110,12 +107,11 @@
             score = lancerBoucleDeJeu(listePhrases);
             nbMotsProposes = listePhrases.length;
         }
-
+    
         afficherResultat (score,nbMotsProposes)
-
+    
     }
-
-    lancerJeu();
+    
 
 
 
